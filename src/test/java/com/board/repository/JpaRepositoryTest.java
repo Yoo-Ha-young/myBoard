@@ -50,7 +50,7 @@ class JpaRepositoryTest {
 
         // When - 실행했을 때
         Article savedArticle = articleRepository.save(
-            Article.of("new article", "new content", "#spring"));
+            Article.of("new articles", "new content", "#spring"));
 
         // Then - 결과가 이러해야 함 (기존 데이터 개수 + 1)
         assertThat(articleRepository.count()).isEqualTo(previousCount + 1);
